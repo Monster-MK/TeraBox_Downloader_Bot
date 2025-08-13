@@ -2,7 +2,14 @@ from pyrogram import Client, filters
 from pymongo import MongoClient
 import os
 from terabox import get_direct_link
-from buttons import download_button
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+# Download button function
+def download_button(url):
+    buttons = [
+        [InlineKeyboardButton("⬇ Download Now", url=url)]
+    ]
+    return InlineKeyboardMarkup(buttons)
 
 # Bot credentials (Fixed values)
 API_ID = 20517170
