@@ -1,18 +1,9 @@
 from pyrogram import Client, filters
 from buttons import download_button
 from pymongo import MongoClient
-import os
 from terabox import get_direct_link
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-# Download button function
-def download_button(url):
-    buttons = [
-        [InlineKeyboardButton("⬇ Download Now", url=url)]
-    ]
-    return InlineKeyboardMarkup(buttons)
-
-# Bot credentials (Fixed values)
+# Bot credentials
 API_ID = 20517170
 API_HASH = "f09e5c91dd864f01063ff63827832137"
 BOT_TOKEN = "8348010277:AAGOQ7Z5HtO7JiyoCz0HZmm0vD9uyALWNr4"
